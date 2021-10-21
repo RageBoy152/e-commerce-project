@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Project - Home</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&currency=GBP"></script>
+    <script src="/home-script.js" defer></script>
+    <script src="/basic-script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="#" onclick="displayDropDown()">Catagories &#709;</a></li>
+                <div class="catagories" id="drop-down-menu">
+                    <ul>
+                        <li><a href="#" onclick="displayCatagory('clear-all')">Clear Catagory Selection</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Audio and DJ</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Technolgy and Computers</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Food and Groceries</a></li>
+                    </ul>
+                </div>
+                <li><a href="/basket">Basket</a></li>
+
+                <li>
+                    <form onsubmit="search();return false">
+                        <button onclick="clearSearch()" type="button">&#128473;</button>
+                        <input type="search" placeholder="Search for an item..." id="search-input">
+                        <button type="submit">&#128270;</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        
+        <h1 id="catagory-text">Catagory: None</h1>
+        <div class="content-wrapper" id="content-container">
+            <!-- <div class="product-container">
+                <img src="/test-item-thumbnail.jpg" alt="failed to load image" class="thumbnail">
+                <p class="product-name">24 Pack Of Origonal Coca Cola Cans. 330ml per can.</p>
+                <p class="product-price">£10.99</p>
+            </div> -->
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        <div id="paypal">
+        
+        </div>
+    </footer>
+
+
+
+    
+    <!-- make order
+    <select id="item-select">
+        <option value="Item One">Item 1</option>
+        <option value="Item Two">Item 2</option>
+    </select>
+
+    <input type="number" id="quantity-select" min="0" max="50">
+
+
+    <button onclick="defineOrder()">Submit</button> -->
+</body>
+</html>

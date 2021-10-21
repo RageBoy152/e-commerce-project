@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Project - About</title>
+
+    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="/about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&currency=GBP"></script>
+    <script src="/basic-script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="#" onclick="displayDropDown()">Catagories &#709;</a></li>
+                <div class="catagories" id="drop-down-menu">
+                    <ul>
+                        <li><a href="#" onclick="displayCatagory('clear-all')">Clear Catagory Selection</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Audio and DJ</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Technolgy and Computers</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Food and Groceries</a></li>
+                    </ul>
+                </div>
+                <li><a href="/basket">Basket</a></li>
+
+                <li>
+                    <form onsubmit="search();return false">
+                        <button onclick="clearSearch()" type="button">&#128473;</button>
+                        <input type="search" placeholder="Search for an item..." id="search-input">
+                        <button type="submit">&#128270;</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        
+        <div class="about-section">
+            <h1 class="section-header">About</h1>
+                <br>
+            <p class="section-text">This website is purly for demonstration purposes.</p>
+            <br>
+            <p class="section-text">The website functions just how any other e-commerce website would.</p>
+            <p class="section-text">New and Upcoming features can be found at <a href="#change-log">change logs</a> aswell as any problems that i need help with.</p>
+        </div>
+
+
+
+        <div id="change-log">
+            <h1 class="section-header">Change Logs</h1>
+                <br>
+            <p class="changelog-header">V1.0 - 21/10/21</p>
+            <p class="changelog-text">This update is the release of the website which probably has alot of bugs in it which is why i ask if you find a bug to report it by emailing me at <a href="mailto:matthewm.uk@gmail.com">matthewm.uk@gmail.com</a></p>
+            <br>
+            <p class="changelog-text">Additional contact info is on the <a href="/contact">contact page</a></p>
+            <br><br>
+            <p class="changelog-text">A currect problem is the payment system currently only works with one item in the basket. <a target="_blank" href="https://stackoverflow.com/questions/69667593/cant-pay-for-more-than-one-item">Post your solutions here</a></p>
+            <br>
+            <p class="changelog-text">A new feature to be added soon (probably in the next change log) is popup that tells you an item has been added to your cart when you press the add to cart button.</p>
+            <br>
+            <p class="changelog-text">Another feature coming in an upcoming update is responsivness which makes the website look good on all screen sizes as this is not currently something i have looked at adding yet.</p>
+        </div>
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>

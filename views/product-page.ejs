@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="/product-styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&currency=GBP"></script>
+    <script src="/basic-script.js" defer></script>
+    <script src="/product-page-script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="#" onclick="displayDropDown()">Catagories &#709;</a></li>
+                <div class="catagories" id="drop-down-menu">
+                    <ul>
+                        <li><a href="#" onclick="displayCatagory('clear-all')">Clear Catagory Selection</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Audio and DJ</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Technolgy and Computers</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Food and Groceries</a></li>
+                    </ul>
+                </div>
+                <li><a href="/basket">Basket</a></li>
+
+                <li>
+                    <form onsubmit="search();return false">
+                        <button onclick="clearSearch()" type="button">&#128473;</button>
+                        <input type="search" placeholder="Search for an item..." id="search-input">
+                        <button type="submit">&#128270;</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        
+        <div class="content-wrapper" id="content-container">
+            <div class="product-info-wrapper">
+                <div class="img-container">
+                    <div class="img-select-container" id="side-img-container">
+                        <img src="" alt="No image" id="side-img-one" class="active">
+                        <img src="" alt="No image" id="side-img-two">
+                        <img src="" alt="No image" id="side-img-three">
+                        <img src="" alt="No image" id="side-img-four">
+                        <img src="" alt="No image" id="side-img-five">
+                        <img src="" alt="No image" id="side-img-six">
+                        <img src="" alt="No image" id="side-img-seven">
+                    </div>
+                    <div class="main-image-container">
+                        <img src="" alt="No image" id="main-img">
+                    </div>
+                </div>
+            
+                <div class="product-text">
+                    <p class="product-name" id="product-name"></p>
+                    <p class="product-price" id="product-price"></p>
+
+                    <div class="btn-wrapper">
+                        <button id="add-to-cart-btn" onclick="addToCart()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="related-items">
+                <h1 class="related-items-heading">Related Products</h1>
+                <div class="related-content-wrapper" id="related-content-wrapper">
+                    <!-- <div class="product-container">
+                        <img src="/test-item-thumbnail.jpg" alt="failed to load image" class="thumbnail">
+                        <p class="product-name">24 Pack Of Origonal Coca Cola Cans. 330ml per can.</p>
+                        <p class="product-price">£10.99</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        <div id="paypal">
+        
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Project - Basket</title>
+
+    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="/basket-styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&currency=GBP"></script>
+    <script src="/payment.js" defer></script>
+    <script src="/basic-script.js" defer></script>
+    <script src="/basket.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="#" onclick="displayDropDown()">Catagories &#709;</a></li>
+                <div class="catagories" id="drop-down-menu">
+                    <ul>
+                        <li><a href="#" onclick="displayCatagory('clear-all')">Clear Catagory Selection</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Audio and DJ</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Technolgy and Computers</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Food and Groceries</a></li>
+                    </ul>
+                </div>
+                <li><a href="/basket">Basket</a></li>
+
+                <li>
+                    <form onsubmit="search();return false">
+                        <button onclick="clearSearch()" type="button">&#128473;</button>
+                        <input type="search" placeholder="Search for an item..." id="search-input">
+                        <button type="submit">&#128270;</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        
+        <div class="basket-wrapper" id="content-container">
+
+            <div id="no-items">
+                <p>You have no items in your basket. <a href="/">Shop for some.</a></p>
+            </div>
+
+            <!-- <div class="product-container">
+                <div class="img-wrapper">
+                    <img src="/product-imgs/one/img-one.jpg" alt="No Image" class="product-img">
+                </div>
+                <div class="info-wrapper">
+                    <p class="product-name">Gaming Headset with Mic for PC, PS4 or Xbox One.</p>
+                    <p class="product-price">Price: £18.78</p>
+                    <div class="functions-wrapper">
+                        <button class="removeFromBasket">Delete</button>
+                        <div class="quantity-wrapper">
+                            <select id="quantity-select">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        <div id="paypal">
+        
+        </div>
+    </footer>
+</body>
+</html>

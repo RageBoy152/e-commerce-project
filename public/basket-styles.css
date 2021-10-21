@@ -1,0 +1,91 @@
+main .basket-wrapper {
+    padding-top: 2vh;
+}
+
+main .basket-wrapper .product-container {
+    width: 90%;
+    margin-inline: auto;
+    background-color: #1d1d1d;
+    border-block: 1px solid gray;
+    height: 15vh;
+    display: flex;
+    overflow-y: auto;
+    margin-block: 20px;
+}
+
+main .basket-wrapper .product-container .product-img {
+    height: 13vh;
+    padding: 1vh;
+    aspect-ratio: 1;
+    transition: transform .15s;
+    cursor: pointer;
+}
+
+main .basket-wrapper .product-container .product-img:hover {
+    transform: scale(1.07);
+}
+
+main .basket-wrapper .product-container .product-name {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main .basket-wrapper .product-container .product-name:hover {
+    text-decoration: underline;
+}
+
+main .basket-wrapper .product-container .product-price {
+    font-size: 18px;
+}
+
+main .basket-wrapper .product-container .functions-wrapper .removeFromBasket {
+    height: 2vh;
+    width: 7vh;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main .basket-wrapper .product-container .functions-wrapper .removeFromBasket:hover {
+    background-color: rgb(210, 210, 210);
+    color: rgb(15, 15, 15);
+}
+
+main .basket-wrapper .product-container .functions-wrapper {
+    margin-top: 3vh;
+}
+
+
+main .basket-wrapper .product-container .functions-wrapper .quantity-wrapper #quantity-select {
+    margin-top: 1vh;
+    height: 2vh;
+    width: 5vh;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    text-align: center;
+}
+
+main .basket-wrapper #no-items {
+    padding-left: 20px;
+    font-size: 26px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+main .basket-wrapper #no-items a {
+    color: white;
+    transition: color .1s ease-in-out;
+    text-decoration: underline;
+}
+
+main .basket-wrapper #no-items a:hover {
+    color: rgb(150, 150, 150);
+}

@@ -1,0 +1,67 @@
+[
+    1, {
+        "price": 10.99,
+        "name": "24 Pack Of Origonal Coca Cola Cans. 330ml per can.",
+        "imgs": {
+            "imgOne": "product-imgs/one/img-one.png",
+            "imgTwo": "product-imgs/one/img-two.png",
+            "imgThree": "product-imgs/one/img-three.png",
+            "imgFour": "product-imgs/one/img-four.png",
+            "imgFive": "product-imgs/one/img-five.png",
+            "imgSix": "product-imgs/one/img-six.png",
+            "imgSeven": "product-imgs/one/img-seven.png"
+        },
+        "catagory": "food",
+        "pageId": 3,
+        "mapId": 1
+    },
+
+    2, {
+        "price": 18.78,
+        "name": "Gaming Headset with Mic for PC, PS4 or Xbox One.",
+        "imgs": {
+            "imgOne": "product-imgs/two/img-one.png",
+            "imgTwo": "product-imgs/two/img-two.png",
+            "imgThree": "product-imgs/two/img-three.png",
+            "imgFour": "product-imgs/two/img-four.png",
+            "imgFive": "product-imgs/two/img-five.png",
+            "imgSix": "product-imgs/two/img-six.png",
+            "imgSeven": "product-imgs/two/img-seven.png"
+        },
+        "catagory": "tech",
+        "pageId": 5,
+        "mapId": 2
+    },
+    3, {
+        "price": 159.99,
+        "name": "Logitech G815 LIGHTSYNC RGB Wired Mechanical Gaming Keyboard with low profile GL-Tactile key switches, 5 programmable G-keys, USB Passthrough, Dedicated media controls, QWERTY UK Layout - Black.",
+        "imgs": {
+            "imgOne": "product-imgs/three/img-one.png",
+            "imgTwo": "product-imgs/three/img-two.png",
+            "imgThree": "product-imgs/three/img-three.png",
+            "imgFour": "product-imgs/three/img-four.png",
+            "imgFive": "product-imgs/three/img-five.png",
+            "imgSix": "product-imgs/three/img-six.png",
+            "imgSeven": "product-imgs/three/img-seven.png"
+        },
+        "catagory": "tech",
+        "pageId": 7,
+        "mapId": 3
+    },
+    4, {
+        "price": 19.99,
+        "name": "Test 2",
+        "imgs": {
+            "imgOne": "product-imgs/three/img-one.png",
+            "imgTwo": "product-imgs/three/img-two.png",
+            "imgThree": "product-imgs/three/img-three.png",
+            "imgFour": "product-imgs/three/img-four.png",
+            "imgFive": "product-imgs/three/img-five.png",
+            "imgSix": "product-imgs/three/img-six.png",
+            "imgSeven": "product-imgs/three/img-seven.png"
+        },
+        "catagory": "tech",
+        "pageId": 9,
+        "mapId": 4
+    }
+]

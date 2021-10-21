@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Project - Contact</title>
+
+    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="/contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&currency=GBP"></script>
+    <script src="/basic-script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="#" onclick="displayDropDown()">Catagories &#709;</a></li>
+                <div class="catagories" id="drop-down-menu">
+                    <ul>
+                        <li><a href="#" onclick="displayCatagory('clear-all')">Clear Catagory Selection</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Audio and DJ</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Technolgy and Computers</a></li>
+                        <li><a href="#" onclick="displayCatagory(this.innerText)">Food and Groceries</a></li>
+                    </ul>
+                </div>
+                <li><a href="/basket">Basket</a></li>
+
+                <li>
+                    <form onsubmit="search();return false">
+                        <button onclick="clearSearch()" type="button">&#128473;</button>
+                        <input type="search" placeholder="Search for an item..." id="search-input">
+                        <button type="submit">&#128270;</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        
+        <div class="contact-section">
+            <h1 class="section-header">Contact</h1>
+                <br>
+            <p class="section-text">If you need to contact me you can messsage me through one of my social medias or email me.</p>
+            <p class="section-text">Please keep in mind i am more likley to reply to you if you email me.</p>
+            <br>
+            <p class="section-text">Email: <a href="mailto:matthewm.uk@gmail.com">matthewm.uk@gmail.com</a></p>
+            <br><br><br>
+            <p class="section-text"><u>Social Medias:</u></p>
+            <br><br>
+            <div class="social-media-wrapper">
+                <p class="section-text">Instagram: <a target="_blank" href="https://www.instagram.com/rage__boy_157/">https://www.instagram.com/rage__boy_157/</a></p>
+                    <br>
+                <div class="copy-wrapper">
+                    <p class="section-text">Discord: <a onclick="copyToClickBoard(this)">Rage Boy#8106</a></p>
+                    <p id="copied">Copied!</p>
+                </div>
+                    <br>
+                <p class="section-text">Sound Cloud: <a target="_blank" href="https://soundcloud.com/matthew-miller-379445983">https://soundcloud.com/matthew-miller-379445983</a></p>
+                    <br>
+                <p class="section-text">Twitter: <a target="_blank" href="https://twitter.com/Matthew35271256">https://twitter.com/Matthew35271256</a></p>
+                    <br>
+                <p class="section-text">Other website: <a target="_blank" href="https://matthew-miller.herokuapp.com/">https://matthew-miller.herokuapp.com/</a></p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+</body>
+
+<script type="text/javascript">
+
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+
+
+    function copyToClickBoard(rawContent){
+    var content = rawContent.innerText
+
+    navigator.clipboard.writeText(content)
+        .then(async() => {
+        const copiedText = document.getElementById('copied')
+        copiedText.style.display = 'block'
+        await delay(2000)
+        copiedText.style.display = 'none'
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+ 
+}
+</script>
+
+</html>
